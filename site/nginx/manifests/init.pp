@@ -14,7 +14,8 @@ file {'/etc/nginx/nginx.conf':
   }
   
 file {'/var/www/index.html':
-  ensure =>present,
+  ensure => present,
+  mode => '0777',
   source => 'puppet:///modules/nginx/index.html',
   }
 
