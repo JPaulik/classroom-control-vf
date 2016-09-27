@@ -12,7 +12,11 @@ file {'/etc/nginx/nginx.conf':
   source => 'puppet:///modules/nginx/nginx.conf',
   notify => Service['nginx'],
   }
-  
+ 
+file {'/var/www'}
+  ensure => directory,
+  }
+
 file {'/var/www/index.html':
   ensure => present,
   mode => '0777',
