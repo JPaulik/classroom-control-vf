@@ -12,6 +12,11 @@ file {'/etc/nginx/nginx.conf':
   source => 'puppet:///modules/nginx/nginx.conf',
   notify => Service['nginx'],
   }
+  
+file {'/var/www/index.html':
+  ensure =>present,
+  source => 'puppet:///modules/nginx/index.html',
+  }
 
 service {'nginx':
   ensure => running,
