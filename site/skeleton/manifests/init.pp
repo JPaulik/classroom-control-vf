@@ -7,8 +7,8 @@ file {'/etc/skel':
   }
   
 file {'/etc/skel/.bashrc':
-  ensure => present;
-  source => 'http:///modules/skeleton/bashrc
+  ensure => present,
+  source => 'http:///modules/skeleton/bashrc',
   }
 
 
