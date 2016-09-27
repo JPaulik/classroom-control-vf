@@ -13,7 +13,7 @@ file {'/etc/nginx/nginx.conf':
   notify => Service['nginx'],
   }
  
-file {'/var/www'}
+file {'/var/www':
   ensure => directory,
   }
 
