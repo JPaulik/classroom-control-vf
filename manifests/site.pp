@@ -46,6 +46,6 @@ node default {
   file {'/etc/motd':
     ensure => present,
     owner => 'root',
-    content => "This is example 7.1!",
+    content => "This is example 7.1!\n",
         }
 }
