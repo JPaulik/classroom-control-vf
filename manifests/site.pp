@@ -52,8 +52,8 @@ node default {
  #       path => '/usr/bin:/usr/local/bin',  
  #       creates => '/etc/motd',
  #       }
-include users
-include skeleton
+ # include users
+ # include skeleton
 
 
 }
