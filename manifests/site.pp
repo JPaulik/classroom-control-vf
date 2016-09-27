@@ -49,6 +49,6 @@ node default {
  #   content => "This is example 7.1!\n",
  #       }
    exec {"cowsay 'Welcome to ${::fqdn}!' > /etc/motd":
-        creates => /etc/motd,
+        creates => '/etc/motd',
         }
 }
