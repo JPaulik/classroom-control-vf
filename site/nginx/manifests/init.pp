@@ -38,9 +38,13 @@ package {$package:
   before => File['/etc/nginx/nginx.conf'],
   }
   
-file {'/etc/nginx/nginx.conf':
-  ensure => present,
-  source => 'puppet:///modules/nginx/nginx.conf',
+file {"${configdir}/nginx.conf":
+   ensure => present,
+   content=>epp('nginx.conf.epp',{
+    user => $user,
+    configdir => $configdir,
+    logdir => $logdir,
+    }),
   notify => Service['nginx'],
   }
  
