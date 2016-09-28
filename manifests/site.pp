@@ -56,7 +56,7 @@ node default {
  # include skeleton
  if $::virtual != 'physical' {
   $name = capitalize($::virtual)
-  notify {"Hello, I am a VM named ${name}":}
+  notify {"Hello, I am a VM named ${name}.":}
   }
 
 
