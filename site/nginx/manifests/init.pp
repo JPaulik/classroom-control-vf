@@ -40,7 +40,7 @@ package {$package:
   
 file {"${configdir}/nginx.conf":
    ensure => present,
-   content=>epp('nginx.conf.epp',{
+   content=>epp('nginx/nginx.conf.epp',{
     user => $user,
     configdir => $configdir,
     logdir => $logdir,
@@ -60,7 +60,7 @@ file {"${docroot}/index.html":
 
  file { "${configdir}/conf.d/default.conf":
   ensure => file,
-  content => epp('default.conf.epp',{
+  content => epp('nginx/default.conf.epp',{
     docroot => $docroot,
     }),
   notify => Service['nginx'],
