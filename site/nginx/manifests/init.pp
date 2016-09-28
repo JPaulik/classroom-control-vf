@@ -54,11 +54,7 @@ file { [$docroot, "${configdir}/conf.d"]:
 
 file {"${docroot}/index.html":
   ensure => present,
-  content=>epp('nginx.conf.epp',{
-    user => $user,
-    configdir => $configdir,
-    logdir => $logdir,
-    }),
+  source=> 'puppet:///modules/nginx/index.html',
   }
   
 
