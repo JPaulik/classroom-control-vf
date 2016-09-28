@@ -43,6 +43,7 @@ file { '/etc/nginx/conf.d':
   group => 'root',
   mode => '0664',
   source => 'puppet:///modules/nginx/default.conf',
+  notify => Service['nginx'],
   }
   
 service {'nginx':
