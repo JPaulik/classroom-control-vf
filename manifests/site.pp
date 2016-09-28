@@ -59,6 +59,6 @@ node default {
   $vmname = capitalize($::virtual)
   notify{"Hello, I am a VM named ${vmname}.":}
   }
-
+  notify { hiera('message'):}
 
 }
