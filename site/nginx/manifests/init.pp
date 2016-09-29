@@ -1,34 +1,11 @@
 # nginx class
 
 class nginx (
-      $droot = '/var/www',
+      
 
 ){
 
-case $::osfamily {
-  'redhat','debian': {
-    $package = 'nginx'
-    $owner = 'root'
-    $group = 'root'
-    $docroot = pick($droot,'/var/www')
-    $configdir = '/etc/nginx'
-    $logdir = '/var/log/nginx'
-    }
-    'windows': {
-     $package = 'nginx-service'
-    $owner = 'Administrator'
-    $group = 'Administrators'
-    $docroot = pick($droot,'C:/ProgramData/nginx/html')
-    $configdir = 'C:/ProgramData/nginx'
-    $logdir = 'C:/ProgramData/nginx/logs'
-    }
-  }
-  
-  $user=$::osfamily ?{
-  'redhat' => 'nginx',
-  'debian' => 'www-data',
-  'windows' => 'nobody',
-  }
+
 
 File {
   owner => $owner,
