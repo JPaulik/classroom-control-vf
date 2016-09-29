@@ -1,9 +1,13 @@
 # nginx class
 
 class nginx (
-      
-
-){
+      $package = $nginx::params::package,
+      $owner = $nginx::params::owner,
+      $group = $nginx::params::group,
+      $docroot = $nginx::params::docroot,
+      $configdir = $nginx::params::configdir,
+      $logdir = $nginx::params::logdir,
+) inherits nginx::params {
 
 
 
