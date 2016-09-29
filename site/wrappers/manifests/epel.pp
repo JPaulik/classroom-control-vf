@@ -1,4 +1,4 @@
-class wrappers::epel {
+class site::epel {
   class {'::epel':}
   
   }
