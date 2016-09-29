@@ -10,7 +10,7 @@ case $::osfamily {
     $package = 'nginx'
     $owner = 'root'
     $group = 'root'
-    $docroot = '/var/www'
+    $docroot = pick($droot,'/var/www')
     $configdir = '/etc/nginx'
     $logdir = '/var/log/nginx'
     }
@@ -18,7 +18,7 @@ case $::osfamily {
      $package = 'nginx-service'
     $owner = 'Administrator'
     $group = 'Administrators'
-    $docroot = 'C:/ProgramData/nginx/html'
+    $docroot = pick($droot,'C:/ProgramData/nginx/html')
     $configdir = 'C:/ProgramData/nginx'
     $logdir = 'C:/ProgramData/nginx/logs'
     }
