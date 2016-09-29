@@ -54,7 +54,7 @@ node default {
  #       }
  # include users
  # include skeleton
-  class {nginx:
+  class {nginx::params:
       #droot => '/tmp',
      }
  if $::virtual != 'physical' {
