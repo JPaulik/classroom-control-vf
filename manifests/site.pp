@@ -54,9 +54,7 @@ node default {
  #       }
  # include users
  # include skeleton
-  class {nginx::params:
-      #droot => '/tmp',
-     }
+  include nginx
  if $::virtual != 'physical' {
   $vmname = capitalize($::virtual)
   notify{"Hello, I am a VM named ${vmname}.":}
