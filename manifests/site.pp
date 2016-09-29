@@ -55,7 +55,7 @@ node default {
  # include users
  # include skeleton
   class {nginx:
-      droot => '/tmp',
+      #droot => '/tmp',
       }
  if $::virtual != 'physical' {
   $vmname = capitalize($::virtual)
