@@ -1,6 +1,9 @@
 # nginx class
 
-class nginx {
+class nginx (
+      $droot = '/var/www',
+
+){
 
 case $::osfamily {
   'redhat','debian': {
