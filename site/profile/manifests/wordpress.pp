@@ -15,11 +15,11 @@ class profile::wordpress {
   include wrappers::mysql
   
   package { 'php':
-    ensure => present,
+    ensure => 'present',
     }
   service { 'php':
-    enable => true,
-    ensure => running,
+    enable => 'true',
+    ensure => 'running',
     subscribe => Package['php'],
     }
   
