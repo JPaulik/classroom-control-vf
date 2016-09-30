@@ -1,6 +1,6 @@
 class profile::wordpress { 
   
-  package { 'php':
+  package { 'php', 'php-mysql':
     ensure => 'present',
     }
  
