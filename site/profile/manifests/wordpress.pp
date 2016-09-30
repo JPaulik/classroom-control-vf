@@ -5,7 +5,7 @@ class profile::wordpress {
     }
  package { 'php-mysql':
     ensure => 'present',
-    requires => Package['php']
+    require => Package['php']
     }
   
   user { 'wordpress':
