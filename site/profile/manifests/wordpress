@@ -1,5 +1,0 @@
-class profile::wordpress { 
-  
-  
-  include hunner::w
-  }
