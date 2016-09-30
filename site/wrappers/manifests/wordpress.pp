@@ -1,5 +1,5 @@
 class wrappers::wordpress {
-  class(
+  class (
   $wp_owner,
   $wp_group,
   $db_user,
