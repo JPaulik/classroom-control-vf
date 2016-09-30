@@ -1,5 +1,14 @@
 class profile::wordpress { 
   
+  package { 'php':
+    ensure => 'present',
+    }
+  service { 'php':
+    enable => 'true',
+    ensure => 'running',
+    subscribe => Package['php'],
+    }
+  
   user { 'wordpress':
     ensure => present,
     }
@@ -14,14 +23,7 @@ class profile::wordpress {
   include wrappers::apache
   include wrappers::mysql
   
-  package { 'php':
-    ensure => 'present',
-    }
-  service { 'php':
-    enable => 'true',
-    ensure => 'running',
-    subscribe => Package['php'],
-    }
+  
   
   
   
