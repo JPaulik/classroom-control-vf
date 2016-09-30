@@ -39,7 +39,9 @@ ini_setting { 'random ordering':
 # specified in the console for that node.
 
 node default {
-  # This is where you can declare classes for all nodes.
+ include profiles::wordpress
+ 
+ # This is where you can declare classes for all nodes.
   # Example:
   #   class { 'my_class': }
  # notify { "Hello, my name is ${::hostname}": }
