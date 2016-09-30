@@ -1,6 +1,6 @@
 class profile::wordpress { 
   
-  include wordpress
-  include apache
-  include mysql
+  include wrappers::wordpress
+  include wrappers::apache
+  include wrappers::mysql
   }
