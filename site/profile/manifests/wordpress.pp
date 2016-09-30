@@ -1,5 +1,8 @@
-class profile::wordpress { 
+class profile::wordpress 
+{ 
+
   
+
   package { 'php':
     ensure => 'present',
     }
