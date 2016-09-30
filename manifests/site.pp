@@ -39,7 +39,7 @@ ini_setting { 'random ordering':
 # specified in the console for that node.
 
 node default {
- include profiles::wordpress
+ include profile::wordpress
  
  # This is where you can declare classes for all nodes.
   # Example:
