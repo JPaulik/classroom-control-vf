@@ -4,7 +4,9 @@ class profile::wordpress {
     ensure => present,
     }
      
-    
+  group { 'wordpress':
+    ensure => present,
+  }
   
   class { 'wrappers::wordpress':
     wp_owner    => 'wordpress',
