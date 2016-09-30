@@ -1,9 +1,12 @@
 class profile::wordpress { 
   
-  package { 'php', 'php-mysql':
+  package { 'php':
     ensure => 'present',
     }
- 
+ package { 'php-mysql':
+    ensure => 'present',
+    requires => Package['php']
+    }
   
   user { 'wordpress':
     ensure => present,
