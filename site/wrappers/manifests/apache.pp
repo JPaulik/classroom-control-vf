@@ -1,3 +1,5 @@
 class wrappers::apache {
-  class {'::apache':}
+  class {'::apache':
+  docroot => '/opt/wordpress'
+  }
   }
